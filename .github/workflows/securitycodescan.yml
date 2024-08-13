@@ -25,7 +25,7 @@ jobs:
       - uses: nuget/setup-nuget@04b0c2b8d1b97922f67eca497d7cf0bf17b8ffe1
       - uses: microsoft/setup-msbuild@v1.0.2
       - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
       - name: Set up projects for analysis
@@ -39,7 +39,10 @@ jobs:
         run: dotnet build --no-restore
 
       - name: Convert sarif for uploading to GitHub
-        uses: security-code-scan/security-code-scan-results-action@cdb3d5e639054395e45bf401cba8688fcaf7a687
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - uses: security-code-scan/security-code-scan-results-action@cdb3d5e639054395e45bf401cba8688fcaf7a687
 
       - name: Upload sarif
         uses: github/codeql-action/upload-sarif@v3
