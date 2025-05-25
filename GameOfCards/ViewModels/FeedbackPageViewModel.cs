@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GameOfCards.ViewModels
+{
+    internal class FeedbackPageViewModel : BaseViewModel
+    {
+        public FeedbackPageViewModel(IErrorHandler errorHandler) : base(errorHandler)
+        {
+        }
+    }
+}
