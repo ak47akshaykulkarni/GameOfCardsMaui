@@ -10,8 +10,8 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
-            .UseMauiCommunityToolkit()
-            .ConfigureFonts(fonts =>
+			.UseMauiCommunityToolkit()
+			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("segoepr.ttf", "OpenSansRegular");
 			});
